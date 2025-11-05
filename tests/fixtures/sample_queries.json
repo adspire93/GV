@@ -1,0 +1,33 @@
+{
+  "snapshot_queries": [
+    "NIFTY Futures",
+    "BANKNIFTY",
+    "RELIANCE Options",
+    "Show me TCS"
+  ],
+  "price_queries": [
+    "What is the price of NIFTY Futures?",
+    "BANKNIFTY 49500 PE price",
+    "RELIANCE 2900 CE LTP",
+    "Price of NIFTY Futures on 15 Oct 2024 at 2 PM"
+  ],
+  "screener_queries": [
+    "Show me stocks above 210 ema",
+    "Any open low stocks today?",
+    "List screeners",
+    "RSI oversold stocks",
+    "Stocks near support"
+  ],
+  "simulator_queries": [
+    "What if I bought NIFTY Futures yesterday?",
+    "P&L if I shorted 2 lots BANKNIFTY yesterday",
+    "If I bought RELIANCE 2900 CE yesterday, what's the result?",
+    "What if I bought NIFTY at market open today?"
+  ],
+  "help_queries": [
+    "help",
+    "How do I use this?",
+    "What can you do?",
+    "Commands"
+  ]
+}

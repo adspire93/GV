@@ -1,0 +1,14 @@
+👋 *Welcome to GammaVantage!*
+Your personal F&O trading assistant.
+
+*I can help you with:*
+📊 *Trade Snapshots* (try: "NIFTY Futures")
+💰 *Price Lookups* (try: "BANKNIFTY 49000 CE price")
+🔍 *Market Screeners* (try: "stocks above 210 ema")
+🎯 *Trade Simulator* (try: "What if I bought RELIANCE yesterday?")
+
+⚠️ *Important:* I provide data and insights, not financial advice. Always trade at your own risk.
+
+What would you like to explore first?
+
+Type *help* anytime for assistance.

@@ -1,0 +1,32 @@
+📚 *GammaVantage Help Guide*
+
+*Available Features:*
+
+📊 *1. Trade Snapshot*
+Get complete 360° view of any F&O instrument
+Example: _NIFTY Futures_
+
+💰 *2. Price Lookup*
+Query current or historical prices
+Examples:
+• _What is the live price of NIFTY Futures?_
+• _BANKNIFTY 49500 PE price on 15 Oct at 2 PM_
+
+🔍 *3. Market Screeners*
+Discover trading opportunities
+Examples:
+• _Show stocks above 210 ema_
+• _RSI oversold stocks_
+• _List screeners_ (see all available)
+
+🎯 *4. Trade Simulator*
+Calculate "what-if" P&L for hypothetical trades
+Examples:
+• _What if I bought NIFTY Futures yesterday?_
+• _P&L if I shorted 2 lots BANKNIFTY yesterday_
+
+*Other Commands:*
+• *subscribe* - View subscription plans
+• *help* - Show this message
+
+Need more help? Contact support.
