@@ -13,7 +13,8 @@ import uvicorn
 import logging
 
 from app.core.config import settings
-from app.api import whatsapp_webhook, chartink_webhook, payment_webhook, health
+from app.core.messaging_config import messaging_config
+from app.api import whatsapp_webhook, telegram_webhook, chartink_webhook, payment_webhook, health
 
 # Configure logging
 logging.basicConfig(
@@ -36,6 +37,7 @@ async def startup_event():
     """Initialize services on startup."""
     logger.info("Starting GammaVantage application...")
     logger.info(f"Environment: {settings.ENVIRONMENT}")
+    logger.info(f"Messaging Platform: {messaging_config.get_active_platform_name()}")
     # TODO: Initialize database connections
     # TODO: Initialize cache connections
     # TODO: Initialize WebSocket connections for real-time data
@@ -79,6 +81,13 @@ async def whatsapp_webhook_verify(request: Request):
     """WhatsApp webhook verification."""
     # TODO: Implement webhook verification
     return {"status": "verified"}
+
+
+@app.post("/webhook/telegram")
+async def telegram_webhook_handler(request: Request):
+    """Telegram webhook endpoint."""
+    # TODO: Implement Telegram webhook handling
+    return {"status": "received"}
 
 
 @app.post("/webhook/chartink")

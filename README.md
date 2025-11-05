@@ -1,8 +1,11 @@
 # GammaVantage
 
-**Democratize F&O trading through WhatsApp.**
+**Democratize F&O trading through messaging platforms.**
 
-GammaVantage is a WhatsApp-based conversational AI assistant that provides simple, actionable F&O trading insights to retail traders.
+GammaVantage is a conversational AI assistant that provides simple, actionable F&O trading insights to retail traders.
+
+**Development:** Testing with Telegram
+**Production:** Launching on WhatsApp
 
 ## 🎯 Vision
 
@@ -61,22 +64,56 @@ cp .env.example .env
 python main.py
 ```
 
+## 🤖 Testing with Telegram
+
+We're using **Telegram** for initial development and testing before launching on WhatsApp.
+
+### Why Telegram First?
+
+✅ **Free & instant setup** - No business verification
+✅ **Easy testing** - Better API, no message template restrictions
+✅ **Faster iteration** - Same features, simpler development
+
+### Set Up Your Telegram Bot
+
+1. **Create a bot** via @BotFather on Telegram
+2. **Get your bot token**
+3. **Add to `.env` file:**
+   ```bash
+   MESSAGING_PLATFORM=telegram
+   TELEGRAM_BOT_TOKEN=your_bot_token_here
+   ```
+
+4. **Run in polling mode** (for local testing):
+   ```bash
+   python scripts/telegram_polling.py
+   ```
+
+5. **Message your bot** and test all features!
+
+**📖 Full Guide:** [Telegram Testing Guide](docs/TELEGRAM_TESTING_GUIDE.md)
+
+**💬 Once testing is complete, switch to WhatsApp by changing `MESSAGING_PLATFORM=whatsapp` in .env**
+
 ## 📋 Prerequisites
 
 - Python 3.11+
 - PostgreSQL 14+
 - Redis 7+
 - InfluxDB 2.0+ (for time-series data)
-- WhatsApp Business API access
+- **For Testing:** Telegram bot token (free from @BotFather)
+- **For Production:** WhatsApp Business API access
 - Market data provider API key
 
 ## 🏗️ Architecture
 
 ```
-User → WhatsApp → WhatsApp Business API → GammaVantage
+User → Telegram/WhatsApp → Message Router → GammaVantage
   → Query Parser → Intent Classifier → Feature Service
     → Data Layer → Response Formatter → User
 ```
+
+**Platform Flexibility:** Supports both Telegram (testing) and WhatsApp (production) through unified message router.
 
 ### Tech Stack
 
